@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/calculadora.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CALCULATOR</h1>
+        <div class="row">
+            <div class="col-1">
+                <span><button value="1">1</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="2">2</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="3">3</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="-">-</button></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <span><button value="4">4</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="5">5</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="6">6</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="+">+</button></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <span><button value="7">7</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="8">8</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="9">9</button></span>
+            </div>
+            <div class="col-1">
+                <span><button value="*">*</button></span>
+            </div>
+        </div>
+    </div>
+    <form action="api.php" method="POST">
+        <input type="number" name="numero1" placeholder="Ingrese el primero número"><br>
+        <select name="Operadores">
+            <option selected>Seleccione operador</option>
+            <option value="Suma">Suma</option>
+            <option value="Resta">Resta</option>
+            <option value="Multiplicacion">Multiplicación</option>
+            <option value="Division">División</option>
+            <option value="Exponencial">Exponencial</option>
+            <option value="RaizCuadrada">Raiz Cuadrada</option>
+            <option value="Modulo">Modulo</option>
+        </select><br>
+        <input type="number" name="numero2" placeholder="Ingrese el segundo número"><br>
+        <input type="submit" value="Enviar" >
+    </form>
+    <?php
+    $numero1=(float)($_POST["numero1"]);
+    $operador=$_POST["Operadores"];
+    $numero2=(float)($_POST["numero2"]);
+    $resultado=0;
+    switch ($operador) {
+        case 'Suma':
+            $resultado=$numero1+$numero2;
+            break;
+        case 'Resta':
+            $resultado=$numero1-$numero2;
+            break;
+        case 'Multiplicacion':
+            $resultado=$numero1*$numero2;
+            break;
+        case 'Division':
+            $resultado=$numero1/$numero2;
+            break;
+        case 'Exponencial':
+            $resultado=$numero1**$numero2;
+            break;
+        case 'RaizCuadrada':
+            $resultado=$numero1/$numero2;
+            break;
+        case 'Modulo':
+            $resultado=$numero1%$numero2;
+            break;
+    };
+    echo($resultado);
+?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

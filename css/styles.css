@@ -1,0 +1,37 @@
+body {
+    background-color: pink;
+}
+h1 {
+    align-self: center;
+    color: rgb(238, 176, 253);
+    -webkit-text-stroke: 1px rgb(112, 112, 112);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div>span>button {
+    border-radius: 15px;
+    border-color: white;
+    padding: 13px;
+    margin-bottom: 15px;
+    background-color: rgb(238, 176, 253);
+}
+div>span>button:hover {
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+    padding: 13px;
+    margin-bottom: 15px;
+    background-color: rgb(236, 160, 255);
+    translate: 1px -1px;
+    box-shadow: 2px 2px 2px rgb(148, 148, 148);
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
