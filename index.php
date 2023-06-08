@@ -103,7 +103,7 @@
                         <input type="submit" value="c" class="operador" name="operator"></span>
                     </div>
                     <div class="col-1">
-                        <input type="submit" value="0" class="number"></span>
+                        <input type="submit" value="0" class="number" name="numero"></span>
                     </div>
                     <div class="col-1">
                         <input type="submit" value="=" class="igual" name="igual"></span>
