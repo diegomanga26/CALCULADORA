@@ -1,5 +1,5 @@
 body {
-    background-color: pink;
+    background-color: rgb(255, 209, 217);
 }
 h1 {
     align-self: center;
@@ -15,14 +15,16 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 }
-div>span>button {
+div>div>input {
     border-radius: 15px;
     border-color: white;
     padding: 13px;
     margin-bottom: 15px;
+    color: rgb(150, 52, 177);
+    font-weight: bolder;
     background-color: rgb(238, 176, 253);
 }
-div>span>button:hover {
+div>div>input:hover {
     border-radius: 15px;
     border-color: rgb(255, 255, 255);
     padding: 13px;
@@ -34,4 +36,27 @@ div>span>button:hover {
 .row {
     display: flex;
     justify-content: center;
+}
+
+.operador {
+    background-color: rgb(231, 135, 255);
+}
+
+.operador:hover {
+    background-color: rgb(219, 77, 255);
+}
+
+form {
+    text-align: center;
+    width: 220px;
+}
+
+#mostrador1 {
+    background-color: rgb(238, 176, 253);
+    border-color: white;
+    border-radius: 15px;
+    width: 220px;
+    padding: 5px;
+    font-weight: bolder;
+    color: rgb(150, 52, 177);
 }
